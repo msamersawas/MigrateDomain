@@ -6,7 +6,7 @@ $Users = Get-ADUser -SearchBase $OU -Filter *
 
 # Prepare results
 $Results = foreach ($User in $Users) {
-    $Groups = Get-ADPrincipalGroupMembership $User | Select-Object -ExpandProperty Name
+    $Groups = Get-ADPrincipalGroupMembership $User | Select-Object -ExpandProperty SamAccountName
     [PSCustomObject]@{
         Username = $User.SamAccountName
         Groups   = $Groups -join ';'
