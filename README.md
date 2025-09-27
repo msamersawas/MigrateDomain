@@ -1,1 +1,2 @@
-#1 Migrate a domain
+# Migrate a domain
+## Migrate users & groups from one domain to another
