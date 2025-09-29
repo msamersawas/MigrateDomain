@@ -14,4 +14,4 @@ $Results = foreach ($User in $Users) {
 }
 
 # Export to CSV
-$Results | Export-Csv -Path
+$Results | Export-Csv -Path "C:\Path\To\Your\Users.csv" -NoTypeInformation
